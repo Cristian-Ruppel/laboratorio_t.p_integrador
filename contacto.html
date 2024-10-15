@@ -1,0 +1,212 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="ejemplo1.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acercade.html">Acerca de</a></li>
+                <li><a href="preguntas.html">Preguntas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Formulario de Contacto</h1>
+
+    <form>
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" class="form-input" maxlength="20" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" class="form-input" maxlength="20">
+        </div>
+    
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="form-input" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" class="form-input" placeholder="Ej: 1234-567890" 
+                   onfocus="this.placeholder=''" onblur="this.placeholder='Ej: 1234-567890'">
+        </div>
+    
+        <div class="form-group">
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" class="form-input" min="16" max="120">
+        </div>
+    
+        <div class="form-group">
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" class="form-input">
+        </div>
+    
+        <div class="form-group">
+            <label for="provincia">Provincia:</label>
+            <input list="provincias" id="provincia" name="provincia" class="form-input">
+            <datalist id="provincias">
+                <option value="Neuquén">
+                <option value="Río Negro">
+                <option value="Chubut">
+                <option value="Santa Cruz">
+                <option value="Tierra del Fuego">
+            </datalist>
+        </div>
+    
+        <div class="form-group">
+            <label for="codigoPostal">Código Postal:</label>
+            <input type="text" id="codigoPostal" name="codigoPostal" class="form-input" pattern="[A-Z][0-9]{4}[A-Z]{3}" placeholder="Ej: A1234ABC">
+        </div>
+    </form>
+    
+    
+
+    <div class="bloque-2">
+        <div class="metodos-contacto">
+            <h3>Método preferido de contacto:</h3>
+            <label for="correoElectronico">Correo electrónico</label>
+            <input type="checkbox" id="correoElectronico" name="contacto" value="correoElectronico" checked>
+            <label for="correoPostal">Correo postal</label>
+            <input type="checkbox" id="correoPostal" name="contacto" value="correoPostal">
+            <label for="telefonoContacto">Teléfono</label>
+            <input type="checkbox" id="telefonoContacto" name="contacto" value="telefono">
+        </div>
+
+        <div class="metodos-suscripcion">
+            <h3>Tipo de suscripción:</h3>
+            <label for="noticias">Noticias</label>
+            <input type="checkbox" id="noticias" name="suscripcion" value="noticias">
+            <label for="promociones">Promociones</label>
+            <input type="checkbox" id="promociones" name="suscripcion" value="promociones">
+            <label for="alertas">Alertas</label>
+            <input type="checkbox" id="alertas" name="suscripcion" value="alertas" checked>
+            <label for="eventos">Eventos</label>
+            <input type="checkbox" id="eventos" name="suscripcion" value="eventos">
+        </div>
+    </div>
+
+    <button type="submit" class="btn-cargar">Cargar</button>
+
+    <footer>
+        <p>Nombre: Cristian M. Ruppel</p>
+        <p>Email: fabulandya@hotmail.com</p>
+        <p>Dirección: Monseñor Esandi y Ayacucho, 8500 – Viedma, Río Negro, Argentina</p>
+        <p>Para más información, visita la página del CURZA: 
+            <a href="https://web.curza.uncoma.edu.ar" target="_blank">CURZA - Universidad Nacional del Comahue</a>
+        </p>
+    </footer>
+</body>
+</html>
+=======
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="ejemplo1.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acercade.html">Acerca de</a></li>
+                <li><a href="preguntas.html">Preguntas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Formulario de Contacto</h1>
+    <form>
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" class="form-input" maxlength="20" required>
+        </div>
+        <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" class="form-input" maxlength="20">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="form-input" required>
+        </div>
+        <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" class="form-input" placeholder="Ej: 1234-567890" 
+                   onfocus="this.placeholder=''" onblur="this.placeholder='Ej: 1234-567890'">
+        </div>
+        <div class="form-group">
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" class="form-input" min="16" max="120">
+        </div>
+        <div class="form-group">
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" class="form-input">
+        </div>
+        <div class="form-group">
+            <label for="provincia">Provincia:</label>
+            <input list="provincias" id="provincia" name="provincia" class="form-input">
+            <datalist id="provincias">
+                <option value="Neuquén">
+                <option value="Río Negro">
+                <option value="Chubut">
+                <option value="Santa Cruz">
+                <option value="Tierra del Fuego">
+            </datalist>
+        </div>
+    
+        <div class="form-group">
+            <label for="codigoPostal">Código Postal:</label>
+            <input type="text" id="codigoPostal" name="codigoPostal" class="form-input" pattern="[A-Z][0-9]{4}[A-Z]{3}" placeholder="Ej: A1234ABC">
+        </div>
+    </form>
+    <div class="bloque-2">
+        <div class="metodos-contacto">
+            <h3>Método preferido de contacto:</h3>
+            <label for="correoElectronico">Correo electrónico</label>
+            <input type="radio" id="correoElectronico" name="contacto" value="correoElectronico" checked>
+            <label for="correoPostal">Correo postal</label>
+            <input type="radio" id="correoPostal" name="contacto" value="correoPostal">
+            <label for="telefonoContacto">Teléfono</label>
+            <input type="radio" id="telefonoContacto" name="contacto" value="telefono">
+        </div>
+        <div class="metodos-suscripcion">
+            <h3>Tipo de suscripción:</h3>
+            <label for="noticias">Noticias</label>
+            <input type="checkbox" id="noticias" name="suscripcion" value="noticias">
+            <label for="promociones">Promociones</label>
+            <input type="checkbox" id="promociones" name="suscripcion" value="promociones">
+            <label for="alertas">Alertas</label>
+            <input type="checkbox" id="alertas" name="suscripcion" value="alertas" checked>
+            <label for="eventos">Eventos</label>
+            <input type="checkbox" id="eventos" name="suscripcion" value="eventos">
+        </div>
+    </div>
+
+    <button type="submit" class="btn-cargar">Cargar</button>
+
+    <footer>
+        <p>Nombre: Cristian M. Ruppel</p>
+        <p>Email: fabulandya@hotmail.com</p>
+        <p>Dirección: Monseñor Esandi y Ayacucho, 8500 – Viedma, Río Negro, Argentina</p>
+        <p>Para más información, visita la página del CURZA: 
+            <a href="https://web.curza.uncoma.edu.ar" target="_blank">CURZA - Universidad Nacional del Comahue</a>
+        </p>
+    </footer>
+</body>
+</html>
+>>>>>>> cbeff8c7de646bf11724e692be3fde728b7cb058
