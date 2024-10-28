@@ -1,24 +1,16 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> cbeff8c7de646bf11724e692be3fde728b7cb058
 body {
   font-family: 'Roboto', sans-serif; 
   font-size: 16px;
   line-height: 1.6;
   color: #333; 
   margin: 0;
-  padding: 0px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   font-weight: bold; 
-<<<<<<< HEAD
   background: linear-gradient(rgba(230, 238, 233, 0.35), rgba(230, 238, 233, 0.35)), 
               url('./img/11.png');
-=======
-  background-image: url('C:/Users/fabul/Desktop/PROGRAMACION WEB/repositorio-cristian-ruppel/laboratorio web/unidad1/tp1/img/11.png');
->>>>>>> cbeff8c7de646bf11724e692be3fde728b7cb058
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -35,11 +27,7 @@ h1, h4, h3 {
 }
 
 article {
-<<<<<<< HEAD
   margin-bottom: 20px; 
-=======
-  margin-bottom: 20px;
->>>>>>> cbeff8c7de646bf11724e692be3fde728b7cb058
 }
 
 main {
@@ -54,6 +42,7 @@ footer {
   padding: 10px;
   margin-top: auto;
   position: relative; 
+  z-index: 1; 
   font-size: 14px;
 }
 
@@ -68,11 +57,7 @@ footer a:hover {
 
 @media (max-width: 600px) {
   body {
-<<<<<<< HEAD
     padding: 10px; 
-=======
-    padding: 10px;
->>>>>>> cbeff8c7de646bf11724e692be3fde728b7cb058
   }
 
   footer {
@@ -94,32 +79,22 @@ footer a:hover {
 
 figure {
   text-align: center; 
+  margin: 0;
 }
 
 figure img {
   max-width: 100%;
   height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
-figure {
-<<<<<<< HEAD
-  width: 45%; 
-  margin:  auto; 
-  border: 5px solid rgba(0, 0, 0, 0.8);
-  border-radius: 8px;
-  padding: 0; 
-=======
-  width: 45%;
-  margin:  auto; 
-  border: 5px solid rgba(0, 0, 0, 0.8);
-  border-radius: 8px;
-  padding: 0;
->>>>>>> cbeff8c7de646bf11724e692be3fde728b7cb058
-  background-color: rgba(255, 255, 255, 0.8);
+figcaption {
+  display: none; 
 }
 
 .navbar {
-  background-color: #F5F5DC; 
+  background-color: #333; 
   overflow: hidden; 
   padding: 0; 
   margin: 0; 
@@ -138,7 +113,7 @@ figure {
 
 .navbar a {
   display: block; 
-  color: rgb(12, 12, 12); 
+  color: rgb(250, 250, 250); 
   text-align: center; 
   padding: 14px 16px; 
   text-decoration: none; 
@@ -153,15 +128,9 @@ form {
   background-color: rgba(255, 255, 255, 0.9); 
   border-radius: 8px; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-<<<<<<< HEAD
-  padding: 30px; 
-  margin: 2px auto; 
-  max-width: 900px; 
-=======
   padding: 10px; 
   margin: 2px auto; 
   max-width: 800px; 
->>>>>>> cbeff8c7de646bf11724e692be3fde728b7cb058
 }
 
 .form-group {
@@ -217,4 +186,71 @@ form {
 
 .btn-cargar:active {
   transform: scale(0.95); 
+}
+
+.back-to-top {
+  right: 40px; 
+  bottom: 20px; 
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; 
+  position: fixed;
+  background-color: #26578b; 
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 36px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s; 
+  z-index: 900;
+}
+
+.back-to-top:hover {
+  background-color: #0056b3; 
+}
+
+.sticky-container {
+    max-height: 300px; 
+    overflow-y: auto;
+    position: relative; 
+}
+
+.sticky-container h1 {
+    position: sticky; 
+    top: 0; 
+    z-index: 1; 
+}
+
+table {
+  width: 100%; 
+  border-collapse: collapse;
+  margin-top: 20px; 
+}
+
+th, td {
+  border: 1px solid #ccc; 
+  padding: 10px; 
+  text-align: center; 
+}
+
+th {
+  background-color: #f2f2f2; 
+}
+
+td {
+  background-color: #ffffff; 
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+th:first-child, td:first-child {
+  width: 30%; 
+}
+
+th:last-child, td:last-child {
+  width: 70%; 
 }

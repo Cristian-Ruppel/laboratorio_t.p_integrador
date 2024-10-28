@@ -3,8 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de</title>
-    <link rel="stylesheet" href="ejemplo1.css"> 
+    <title>inicio</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* Estilos CSS para centrar la imagen */
+        .imagen-centro {
+            text-align: center; /* Centra el contenido dentro del div */
+        }
+
+        /* Animación para girar la imagen */
+        .girar {
+            animation: girar 2s linear; /* Gira 1 vez y se detiene */
+        }
+
+        @keyframes girar {
+            from {
+                transform: rotateY(0deg); /* Comienza sin rotación */
+            }
+            to {
+                transform: rotateY(360deg); /* Rota 360 grados (1 vuelta) */
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -20,15 +40,17 @@
         <h4>Centro Universitario Regional Zona Atlantica <br>
             Universidad Nacional del Comahue.</h4>
     </div>
-    
+
+    <div class="imagen-centro">
+        <img class="girar" src="C:/Users/fabul/Desktop/PROGRAMACION WEB/repositorio-cristian-ruppel/laboratorio web/unidad1/tp1/logocircular.png" alt="Logo CURZA" width="200">
+    </div>
+
     <article>
-        <figure>
-            <img src="CURZAFRENTE.webp" alt="Foto del exterior del CURZA" width="600" height="400">
-            <figcaption>Foto del exterior del CURZA</figcaption>
-        </figure>
         <p>El Centro Universitario Regional Zona Atlántica (C.U.R.Z.A) fue creado para ofrecer acceso a la educación superior en la región, promoviendo el desarrollo académico y social. Desde su inauguración, se ha enfocado en brindar formación de calidad y responder a las necesidades locales. A través de diversas carreras y programas, el C.U.R.Z.A se ha consolidado como un pilar en la comunidad educativa de la zona.</p>
     </article>
     
+    <a href="#" class="back-to-top">&#8593;</a>
+
     <footer>
         <p>Nombre: Cristian M. Ruppel</p>
         <p>Email: fabulandya@hotmail.com</p>
