@@ -28,18 +28,18 @@
     
         <div class="form-group">
             <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" class="form-input" maxlength="20" required> <!-- Modificado: longitud máxima de 20 caracteres -->
+            <input type="text" id="apellido" name="apellido" class="form-input" maxlength="20" required> 
         </div>
     
         <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" class="form-input" required> <!-- Modificado: campo requerido -->
+            <input type="email" id="email" name="email" class="form-input" required> 
         </div>
     
         <div class="form-group">
             <label for="telefono">Teléfono:</label>
             <input type="tel" id="telefono" name="telefono" class="form-input" placeholder="Ej: 1234-567890" 
-                   onfocus="this.placeholder=''" onblur="this.placeholder='Ej: 1234-567890'"> <!-- Ayuda que se borra al hacer clic -->
+                   onfocus="this.placeholder=''" onblur="this.placeholder='Ej: 1234-567890'"> 
         </div>
     
         <div class="form-group">
@@ -49,12 +49,12 @@
     
         <div class="form-group">
             <label for="direccion">Dirección:</label>
-            <input type="text" id="direccion" name="direccion" class="form-input"> <!-- Campo de texto libre -->
+            <input type="text" id="direccion" name="direccion" class="form-input"> 
         </div>
     
         <div class="form-group">
             <label for="provincia">Provincia:</label>
-            <input list="provincias" id="provincia" name="provincia" class="form-input"> <!-- Texto libre, provincias patagónicas sugeridas -->
+            <input list="provincias" id="provincia" name="provincia" class="form-input"> 
             <datalist id="provincias">
                 <option value="Neuquén">
                 <option value="Río Negro">
@@ -66,10 +66,9 @@
     
         <div class="form-group">
             <label for="codigoPostal">Código Postal:</label>
-            <input type="text" id="codigoPostal" name="codigoPostal" class="form-input" pattern="[A-Z][0-9]{4}[A-Z]{3}" placeholder="Ej: A1234ABC" required> <!-- Controlado con expresión regular -->
+            <input type="text" id="codigoPostal" name="codigoPostal" class="form-input" pattern="[A-Z][0-9]{4}[A-Z]{3}" placeholder="Ej: A1234ABC" required> 
         </div>
 
-        <!-- Modificado: Elección del método preferido de contacto usando radio buttons -->
         <div class="form-group">
             <label>Método preferido de contacto:</label>
             <div>
