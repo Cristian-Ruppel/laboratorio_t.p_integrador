@@ -211,6 +211,21 @@ form {
   background-color: #0056b3; 
 }
 
+#leer-mas {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#leer-mas:hover {
+  background-color: #45a049;
+}
+
 .sticky-container {
     max-height: 300px; 
     overflow-y: auto;
@@ -223,34 +238,10 @@ form {
     z-index: 1; 
 }
 
-table {
-  width: 100%; 
-  border-collapse: collapse;
-  margin-top: 20px; 
+#cv-abrir {
+    display: block;
 }
 
-th, td {
-  border: 1px solid #ccc; 
-  padding: 10px; 
-  text-align: center; 
-}
-
-th {
-  background-color: #f2f2f2; 
-}
-
-td {
-  background-color: #ffffff; 
-}
-
-tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-th:first-child, td:first-child {
-  width: 30%; 
-}
-
-th:last-child, td:last-child {
-  width: 70%; 
+#cv-completo {
+    display: none;
 }
