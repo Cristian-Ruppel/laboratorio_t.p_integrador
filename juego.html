@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Preguntas</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .game-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .question {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .answer {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .answer:hover {
+            background-color: #45a049;
+        }
+
+        .answer:active {
+            transform: scale(0.98);
+        }
+
+        #volver {
+            background-color: #26578b; 
+            color: white; 
+            font-size: 16px; 
+            padding: 10px 20px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            margin-top: 20px; 
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #volver:hover {
+            background-color: #1c457a;
+        }
+
+        #volver:active {
+            transform: scale(0.95);
+        }
+
+        .correct {
+            background-color: #4CAF50;
+        }
+
+        .incorrect {
+            background-color: #f44336;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acercade.html">Acerca de</a></li>
+            <li><a href="preguntas.html">Preguntas</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <button id="volver" onclick="window.history.back()">Volver</button>
+
+    <div class="titulo">
+        <h1>Juego de Preguntas</h1>
+        <h4>¿Estás listo para el desafío?</h4>
+    </div>
+
+    <div class="game-container">
+        <div class="question" id="question"></div>
+        <div class="answers">
+            <button class="answer" id="a" onclick="checkAnswer('a')">Opción A</button>
+            <button class="answer" id="b" onclick="checkAnswer('b')">Opción B</button>
+            <button class="answer" id="c" onclick="checkAnswer('c')">Opción C</button>
+            <button class="answer" id="d" onclick="checkAnswer('d')">Opción D</button>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top">&#8593;</a>
+
+    <footer>
+        <p>Nombre: Cristian M. Ruppel</p>
+        <p>Email: fabulandya@hotmail.com</p>
+        <p>Dirección: Monseñor Esandi y Ayacucho, 8500 – Viedma, Río Negro, Argentina</p>
+        <p>Para más información, visita la página del CURZA: 
+            <a href="https://web.curza.uncoma.edu.ar" target="_blank">CURZA - Universidad Nacional del Comahue</a>
+        </p>
+    </footer>
+
+    <script>
+        const questions = [
+            {
+                question: "¿Cuántos años tiene la Argentina existiendo como nación con esta forma de sociedad?",
+                answers: { a: "100 años", b: "150 años", c: "200 años", d: "211 años" },
+                correctAnswer: "d"
+            },
+            {
+                question: "¿Cuántos años tiene la Patagonia formando parte de esta Argentina como tal?",
+                answers: { a: "50 años", b: "100 años", c: "200 años", d: "300 años" },
+                correctAnswer: "b"
+            },
+            {
+                question: "¿Cuántos años tienen los pueblos originarios en la Patagonia?",
+                answers: { a: "5.000 años", b: "7.000 años", c: "9.000 a 12.000 años", d: "20.000 años" },
+                correctAnswer: "c"
+            },
+            {
+                question: "¿Quién permitió que en Argentina existan jornadas laborales de 8 horas?",
+                answers: { a: "Juan Domingo Perón", b: "Hipólito Yrigoyen", c: "Carlos Menem", d: "Raúl Alfonsín" },
+                correctAnswer: "a"
+            },
+            {
+                question: "¿Quién permitió que el trabajador tenga indemnización por despidos, jubilación y asignación familiar?",
+                answers: { a: "José de San Martín", b: "Juan Domingo Perón", c: "Eva Perón", d: "Ricardo Alfonsín" },
+                correctAnswer: "b"
+            },
+            {
+                question: "¿Desde cuándo existe la universidad pública en Argentina?",
+                answers: { a: "1830", b: "1870", c: "1910", d: "1940" },
+                correctAnswer: "b"
+            },
+            {
+                question: "¿Existen universidades públicas en el resto de los países del continente americano?",
+                answers: { a: "Sí, en todos los países", b: "No, solo en Argentina", c: "Sí, pero no en todos los países", d: "No existen" },
+                correctAnswer: "c"
+            },
+            {
+                question: "¿Cuánto crees que cuesta una atención médica en Estados Unidos?",
+                answers: { a: "50 USD", b: "500 USD", c: "5000 USD", d: "1000 USD" },
+                correctAnswer: "c"
+            },
+            {
+                question: "¿Cuánto crees que cuesta la misma atención médica en Argentina con ayuda de lo público?",
+                answers: { a: "1000 ARS", b: "50 USD", c: "Gratis", d: "100 ARS" },
+                correctAnswer: "c"
+            },
+            {
+                question: "¿Quién fue el principal responsable de la Reforma Universitaria en Argentina?",
+                answers: { a: "Juan Domingo Perón", b: "Carlos Menem", c: "Rector Enrique Molina", d: "Estudiantes en 1918" },
+                correctAnswer: "d"
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        function loadQuestion() {
+            const questionElement = document.getElementById('question');
+            const answerButtons = document.querySelectorAll('.answer');
+            const currentQ = questions[currentQuestion];
+
+            questionElement.textContent = currentQ.question;
+            answerButtons[0].textContent = currentQ.answers.a;
+            answerButtons[1].textContent = currentQ.answers.b;
+            answerButtons[2].textContent = currentQ.answers.c;
+            answerButtons[3].textContent = currentQ.answers.d;
+
+            answerButtons.forEach(button => {
+                button.classList.remove('correct', 'incorrect');
+                button.disabled = false;
+                button.classList.remove('hidden');
+            });
+        }
+
+        function checkAnswer(selected) {
+            const answerButtons = document.querySelectorAll('.answer');
+            const currentQ = questions[currentQuestion];
+
+            if (selected === currentQ.correctAnswer) {
+                score++;
+            }
+
+            answerButtons.forEach(button => {
+                button.disabled = true;
+
+                if (button.textContent === currentQ.answers[currentQ.correctAnswer]) {
+                    button.classList.add('correct');
+                } else {
+                    button.classList.add('incorrect');
+                    button.classList.add('hidden');
+                }
+            });
+
+            currentQuestion++;
+
+        
+            if (currentQuestion < questions.length) {
+                setTimeout(loadQuestion, 1000);
+            } else {
+                setTimeout(() => alert('Juego terminado. Tu puntaje es: ' + score), 1000);
+            }
+        }
+
+        loadQuestion();
+    </script>
+</body>
+</html>
